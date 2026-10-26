@@ -1,0 +1,30 @@
+{
+  "name": "Yandex Disk Tests",
+  "output": "./allure-report",
+  "historyPath": "./history.jsonl",
+  "variables": {
+    "Browser": "Firefox",
+    "Java": "25",
+    "Base URL": "https://disk.yandex.ru",
+    "baseUrlApi": "https://cloud-api.yandex.net",
+    "OS": "Windows 11"
+  },
+  "categories": {
+    "rules": [
+      {
+        "name": "Environment issues",
+        "matchers": {
+          "statuses": ["broken"],
+          "message": "Could not start a new session"
+        }
+      }
+    ]
+  },
+  "plugins": {
+    "awesome": {
+      "options": {
+        "groupBy": ["epic", "feature", "story"]
+      }
+    }
+  }
+}
